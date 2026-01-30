@@ -97,17 +97,13 @@ class TestSlider extends StatelessWidget {
   }
 
   void _increaseAction() {
-    if (onChanged != null) {
-      final double newNormalizedValue = (_normalizedValue + _semanticActionUnit).clamp(0.0, 1.0);
-      onChanged!(min + newNormalizedValue * (max - min));
-    }
+    final double newNormalizedValue = (_normalizedValue + _semanticActionUnit).clamp(0.0, 1.0);
+    onChanged?.call(min + newNormalizedValue * (max - min));
   }
 
   void _decreaseAction() {
-    if (onChanged != null) {
-      final double newNormalizedValue = (_normalizedValue - _semanticActionUnit).clamp(0.0, 1.0);
-      onChanged!(min + newNormalizedValue * (max - min));
-    }
+    final double newNormalizedValue = (_normalizedValue - _semanticActionUnit).clamp(0.0, 1.0);
+    onChanged?.call(min + newNormalizedValue * (max - min));
   }
 
   @override
@@ -137,9 +133,7 @@ class TestCheckbox extends StatelessWidget {
   final ValueChanged<bool?>? onChanged;
 
   void _handleTap() {
-    if (onChanged != null) {
-      onChanged!(value != true);
-    }
+    onChanged?.call(value != true);
   }
 
   @override
