@@ -131,11 +131,7 @@ class TestSlider extends StatelessWidget {
 /// Material Design components. It only handles semantic actions for testing
 /// purposes and does not render any visual elements.
 class TestCheckbox extends StatelessWidget {
-  const TestCheckbox({
-    required this.value,
-    required this.onChanged,
-    super.key,
-  });
+  const TestCheckbox({required this.value, required this.onChanged, super.key});
 
   final bool? value;
   final ValueChanged<bool?>? onChanged;

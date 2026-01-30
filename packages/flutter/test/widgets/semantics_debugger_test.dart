@@ -240,7 +240,9 @@ void main() {
         textDirection: TextDirection.ltr,
         child: SemanticsDebugger(
           child: ListView(
-            children: <Widget>[Container(key: childKey, height: 5000.0, color: const Color(0xFF4CAF50))],
+            children: <Widget>[
+              Container(key: childKey, height: 5000.0, color: const Color(0xFF4CAF50)),
+            ],
           ),
         ),
       ),
