@@ -6,7 +6,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'checkbox_tester.dart';
 import 'editable_text_utils.dart';
+import 'slider_tester.dart';
 import 'utils.dart';
 import 'widgets_app_tester.dart';
 
